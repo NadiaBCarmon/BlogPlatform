@@ -1,0 +1,66 @@
+#index-background {
+	background-color: white;
+	height: 100vh;
+	width: 100vw;
+}
+
+nav {
+	background-color: #323dbc;
+	/*border: thin;
+	border-style: solid;*/
+}
+
+ul {
+	display: inline-block;
+	margin-left: 75%;
+}
+
+li {
+	display: inline-block;
+}
+
+div.nav-wrapper a {
+	color: #ffffff;
+}
+
+#logo-plain {
+	height: 56px;
+	width: 90px;
+	overflow: none;
+}
+
+#brand-logo {
+}
+
+h2 {
+	margin-left: 25%;
+}
+
+h3 {
+	margin-left: 25%;
+}
+
+#title {
+	display: block;
+	width: 50%;
+	height: 30px;
+	margin: 2%;
+	align-items: center;
+	margin-left: 25%;
+	font-size: 20px;
+
+}
+
+#content {
+	display: block;
+	width: 50%;
+	height: 400px;
+	margin-left: 25%;
+	font-size: 20px;
+}
+
+#submit {
+	width: 240px;
+	margin: 3%;
+	margin-left: 25%;
+}	height: 50%;

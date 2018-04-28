@@ -45,3 +45,7 @@ end
 get '/addedit' do
 	erb :addedit
 end
+
+get '/blog' do
+	erb :blog
+end
