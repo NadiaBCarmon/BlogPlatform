@@ -1,2 +1,4 @@
-class TagAndPost< ActiveRecord::Base
+class Tagandpost< ActiveRecord::Base
+	belongs_to :post
+	belongs_to :tag
 end

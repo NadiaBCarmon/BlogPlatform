@@ -3,11 +3,22 @@ require 'sinatra/activerecord'
 require 'pg'
 require 'rake'
 
-# require_relative all Models
+require_relative './models/Blog'
+require_relative './models/Post'
+require_relative './models/Tag'
+require_relative './models/TagandPost'
+require_relative './models/User'
 
 set :database, {adapter: 'postgresql', database: 'blog_site'} 
 
 get '/' do
+	
+	@users = User.all
+	p @users
+	@blogs = Blog.all
+	@posts = Post.all
+	@tags = Tag.all
+	@tagandposts = Tagandpost.all
 	erb :index
 end
 

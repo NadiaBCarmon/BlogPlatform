@@ -1,0 +1,26 @@
+<% @users.each do |users| %>
+<p><%= users.username %></p>
+<p><%= users.email %></p>
+<p><%= users.password %></p>
+<%end%>
+
+<% @blogs.each do |blogs| %>
+<p><%= blogs.user_id %></p>
+<%end%>
+
+<% @posts.each do |posts| %>
+<p><%= posts.blog_id %></p>
+<p><%= posts.post_title %></p>
+<p><%= posts.post_content %></p>
+<%end%>
+
+
+<% @tags.each do |tags| %>
+<p><%= tags.tag_name %></p>
+<%end%>
+
+
+<% @tagandposts.each do |tagandposts| %>
+<p><%= tagandposts.tag_id %></p>
+<p><%= tagandposts.post_id %></p>
+<%end%>
