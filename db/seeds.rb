@@ -8,7 +8,6 @@ Blog.create(user_id: 2)
 Blog.create(user_id: 3)
 Blog.create(user_id: 4)
 
-
 Post.create(blog_id: 1, post_title: "Next Friday - One Day Sale Only", post_content: "Shit goes here.")
 Post.create(blog_id: 2, post_title: "How To Manage Your Reputation on Social Media", post_content: "Fuckin hell")
 Post.create(blog_id: 3, post_title: "Holy shit motherfucker", post_content: "Blah blah blah")
@@ -21,6 +20,4 @@ Tagandpost.create(tag_id: 1, post_id: 1)
 Tagandpost.create(tag_id: 2, post_id: 1)
 Tagandpost.create(tag_id: 3, post_id: 2)
 Tagandpost.create(tag_id: 4, post_id: 2)
-
-User.find(1)
 

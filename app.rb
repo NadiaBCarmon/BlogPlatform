@@ -10,15 +10,23 @@ require_relative './models/TagandPost'
 require_relative './models/User'
 
 set :database, {adapter: 'postgresql', database: 'blog_site'} 
+enable :sessions
 
-get '/' do
-	
-	@users = User.all
-	p @users
-	@blogs = Blog.all
-	@posts = Post.all
+get '/' do	
+
+	# params[username]
+
+	# @users = User.find_by(params[:username])
+
+	#  		if @users != nil
+	#  			session[:user_id] = @user.id
+	#  			erb :login
+	# 		end
+
+	@blogs = Blog.where(user_id: 1)
+	@posts = Post.where(blog_id: 1)
 	@tags = Tag.all
-	@tagandposts = Tagandpost.all
+	@tagandposts = Tagandpost.where(post_id: 1)
 	erb :index
 end
 
