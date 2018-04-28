@@ -23,10 +23,11 @@ get '/' do
 	#  			erb :login
 	# 		end
 
-	@blogs = Blog.where(user_id: 1)
-	@posts = Post.where(blog_id: 1)
-	@tags = Tag.all
-	@tagandposts = Tagandpost.where(post_id: 1)
+	# @blogs = Blog.where(user_id: 1)
+
+	# @posts = Post.where(blog_id: 1)
+	# @tags = Tag.all
+	# @tagandposts = Tagandpost.where(post_id: 1)
 	erb :index
 end
 
@@ -43,6 +44,12 @@ get '/signup' do
 end
 
 get '/addedit' do
+
+	loop do
+	@post = Post.create()
+	Post.create(blog_id: 1, post_title: params[:title], post_content: params[:content])
+	end
+	# params[:content]
 	erb :addedit
 end
 
