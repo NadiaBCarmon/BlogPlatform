@@ -27,3 +27,21 @@ div.nav-wrapper a {
 	margin: 5%;
 	margin-left: 50%;
 }
+
+
+/*#container {
+	border-color: black;
+	border: thin;
+	border-style: solid; 
+	margin: 3%;
+}
+*/
+#title {
+	margin: 5%;
+	display: inline-block;
+}
+
+#content {
+	display: inline-block;
+
+}

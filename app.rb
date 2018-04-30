@@ -12,47 +12,61 @@ require_relative './models/User'
 set :database, {adapter: 'postgresql', database: 'blog_site'} 
 enable :sessions
 
-get '/' do	
 
-	# params[username]
-
-	# @users = User.find_by(params[:username])
-
-	#  		if @users != nil
-	#  			session[:user_id] = @user.id
-	#  			erb :login
-	# 		end
-
-	# @blogs = Blog.where(user_id: 1)
-
-	# @posts = Post.where(blog_id: 1)
-	# @tags = Tag.all
-	# @tagandposts = Tagandpost.where(post_id: 1)
+get '/' do
 	erb :index
+end
+##------##
+
+#Nav Bar#
+##View Blog - Non-Logged In View##
+get '/blog/view' do
+	@entry_title = session[:entry_title]
+	@entry_content = session[:entry_content]
+	erb :view
+end
+
+#Redirects from Add/Edit Page#
+post '/blog/post' do
+	@thanks = "<h3>" + "Thanks for submitting your content!" + "</h3>"
+	session[:entry_title] = "<h1>" + params[:title] + "</h1>",
+	session[:entry_content] = "<h2>" + params[:content] + "</h2>"
 end
 
 get '/login' do
 	erb :login
 end
 
-get '/logout' do
-	erb :logout
-end
-
 get '/signup' do
 	erb :signup
 end
+#---End of Nav Routes---#
 
-get '/addedit' do
 
-	loop do
-	@post = Post.create()
-	Post.create(blog_id: 1, post_title: params[:title], post_content: params[:content])
-	end
-	# params[:content]
+# post '/:user' do
+
+# 	@users = User.find_by(username: params[:username], password: params[:password])
+# 	if @users == nil
+# 		@user = session[:id]
+# 		@user = User.find(session[:id])
+
+# 	Makes url the username entered in form
+# 	 params[:user] = params[:username]
+# 	 params[:user] = params.values_at('username')
+# 	end
+# end
+
+
+get '/user/addedit' do
+	@entry_title = session[:entry_title],
+	@entry_content = session[:entry_content]
+	# User.create(username: params[:username], email: params[:email], password: params[:password])
 	erb :addedit
 end
 
-get '/blog' do
-	erb :blog
+
+# Logout current user
+get '/logout' do
+	session.clear
+	redirect '/login'
 end

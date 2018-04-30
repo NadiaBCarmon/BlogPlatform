@@ -6,7 +6,8 @@
 	 <!-- Compiled and minified CSS -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-		<link rel="stylesheet" type="text/css" href="/CSS/index.css">
+		<link rel="stylesheet" type="text/css" href="/CSS/view.css">
+
 </head>
 
 <body>
@@ -24,11 +25,14 @@
   </div>
 </nav>
 
-<form method="POST" action="/:user">
-	<input type="text" name="username" placeholder="username">
-	<input type="password" name="password" placeholder="password">
-	<button name="submit" id="submit">Submit</button>
-</form>
+<button id="addedit"><a href="/user/addedit">
+Add/Edit
+</a></button>
+
+<div id="published">
+  <h1 id="title"><%= @entry_title %></h1>
+  <h2 id="content"><%= @entry_content %></h2>
+</div>
 
 <!-- Compiled and minified JavaScript -->
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -38,7 +42,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <script src="/JS/index.js"></script>
+  <!-- <script src="/JS/index.js"></script> -->
 
 </body>
 </html>

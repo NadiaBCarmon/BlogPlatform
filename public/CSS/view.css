@@ -27,3 +27,20 @@ div.nav-wrapper a {
 	margin: 5%;
 	margin-left: 50%;
 }
+
+#title {
+	margin: 10%;
+	display: inline-block;
+}
+
+#content {
+	display: inline-block;
+
+}
+
+#addedit {
+	height: 30%;
+	width: 30%;
+	margin-left: 20%;
+	margin: 5%;
+}

@@ -13,9 +13,9 @@
 
 <nav>
   <div class="nav-wrapper">
-    <a href="/blog" class="brand-logo"><img src="../Images/logo-plain.png" id="logo-plain"></img></a>
+    <a href="/" class="brand-logo"><img src="../Images/logo-plain.png" id="logo-plain"></img></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="/blog">Blog</a></li>
+      <li><a href="/blog/view">Blog</a></li>
 
       <li><a href="/login">Login</a></li>
       <li><a href="/signup">Sign Up</a></li>
@@ -28,10 +28,10 @@
 
 <h3>Writing Toolbar</h3>
 
-<form method="POST" action="/blog">
-<input type="text" name="title" id="title" placeholder="Title">
-<textarea name="content" id="content" placeholder="What's On Your Mind?"></textarea>
-<input type="submit" name="submit" id="submit">
+<form method="POST" action="/blog/post">
+<input type="text" name="title" id="title" placeholder="Title"><%= @entry_title %></input>
+<textarea name="content" id="content" placeholder="What's On Your Mind?"><%= @entry_content %></textarea>
+<button placeholder="Publish" id="publish"></button>
 </form>
 
 <!-- Compiled and minified JavaScript -->

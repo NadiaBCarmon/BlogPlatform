@@ -2,6 +2,8 @@ User.create(username: "fjalar1", email:"fjarlar67@yahoo.com", password:"1234")
 User.create(username: "abbie78", email:"abbie68@hotmail.com", password: "4321")
 User.create(username: "lindsay6", email:"linds20@gmail.com", password: "2345")
 User.create(username: "emmie90", email:"emmie9076@aol.com", password:"5432")
+User.create(username: "sal25", email:"sal@optimum.net", password:"8875")
+
 
 Blog.create(user_id: 1)
 Blog.create(user_id: 2)
